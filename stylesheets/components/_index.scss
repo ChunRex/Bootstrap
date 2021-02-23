@@ -85,7 +85,7 @@
 }
 
 .main-text-lg{
-    color: rgba(theme-color('primary'), 1);
+    color: theme-color('primary');
     writing-mode: vertical-rl;
     line-height: 32px;
     height: 405px;
@@ -94,7 +94,7 @@
 } // PC 文字
 
 .main-text{
-    color: rgba(theme-color('primary'), 1);
+    color: theme-color('primary');
     line-height: 32px;
 } // 響應式文字
 
@@ -153,10 +153,4 @@
         display: none;
       }
     }
-  }
-
-  .QQ{
-     color: rgba(theme-color('primary'), 1);
-     font-family: "微軟正黑體";
-     font-size: 48px;
   }
