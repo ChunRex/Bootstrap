@@ -1,0 +1,9 @@
+// 背景圖片垂直置中
+@mixin bgPicture ($bgSrc, $bgH, $bgW) {
+    background-image: url($bgSrc);
+    background-repeat: none;
+    background-size: cover;
+    background-position: center center;
+    height: $bgH;  // 帶入高度
+    width: $bgW;  // 帶入寬度
+}

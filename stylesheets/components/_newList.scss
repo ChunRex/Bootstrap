@@ -1,0 +1,13 @@
+// menu
+// 產品圖片
+.newList-1{
+    @include bgPicture("../image/index/new-list-1.jpg",315px, 100%)
+}
+
+.newList-2{
+    @include bgPicture("../image/index/new-list-2.jpg",315px, 100%)
+}
+
+.newList-3{
+    @include bgPicture("../image/index/new-list-3.jpg",315px, 100%)
+}

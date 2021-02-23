@@ -1,0 +1,162 @@
+// header
+.header{
+    position: relative;
+    .index-banner{
+       @include bgPicture ("../image/index/board-game-banner.jpg", 496px, auto)
+    }
+    >.row{  
+       margin-top: -90px; // 可以把三張圖覆蓋在 banner 上
+    }
+    .rectangle-tag{
+       height: 256px;
+       width: 100%;
+       z-index: 2;
+       &:hover, &.active{  // 滑動特效
+          .banner-item-over{
+             background-color: rgba(theme-color('light'), .8);
+          }
+          span{
+             color: rgba(theme-color('primary'), 8); 
+          }
+       }
+    }
+    .banner-img-1{  // 圖片1
+       @include bgPicture("../image/index/board-game-1.jpg",100%, 100%); 
+       position: absolute;
+       z-index: -1;
+    }
+    .banner-img-2{  // 圖片2
+        @include bgPicture("../image/index/board-game-2.jpg",100%, 100%); 
+        position: absolute;
+        z-index: -1;
+     }
+     .banner-img-3{  // 圖片3
+        @include bgPicture("../image/index/board-game-3.jpg",100%, 100%); 
+        position: absolute;
+        z-index: -1;
+     }
+    .rectangle{  // 文字
+       position: absolute;
+       top:50%;
+       left:50%;
+       transform: translate(-50%,-50%);
+       writing-mode: vertical-lr; // 改為垂直
+       font-size: 22px;
+       letter-spacing: 10px;
+       font-weight: bold;
+       color:white;
+    }
+    .banner-item-over{  // 特效
+       height: 256px;
+       width: 100%;
+       background-color: rgba(theme-color('secondary'), .8);
+       transition: background-color 0.3s;
+    } 
+    // 以上在 index
+    .introduction-banner{
+       background-image: url("../image/introduction/banner.jpg");
+       background-repeat: no-repeat;
+       background-size: cover;
+       background-position: center center;
+       width: auto;
+       height: 496px;
+    }
+ }
+
+
+
+//main
+.mainPic-1{
+    @include bgPicture("../image/index/main-pic.jpg", 445px, 100%)
+    margin: -20px 0;
+}
+
+.mainPicRwd-1{
+    @include bgPicture("../image/index/main-pic.jpg", 415px, 100%)
+}
+
+.mainPic-2{
+    @include bgPicture("../image/index/main-pic-1.jpg", 445px, 100%);
+    margin: -20px 0;
+}
+
+.mainPicRwd-2{
+    @include bgPicture("../image/index/main-pic-1.jpg", 415px, 100%)
+}
+
+.main-text-lg{
+    color: rgba(theme-color('primary'), 1);
+    writing-mode: vertical-rl;
+    line-height: 32px;
+    height: 405px;
+    padding: 30px;
+    margin: 0;  
+} // PC 文字
+
+.main-text{
+    color: rgba(theme-color('primary'), 1);
+    line-height: 32px;
+} // 響應式文字
+
+
+
+// newList
+// 三張圖片
+.newListPic-1{
+    @include bgPicture("../image/index/new-list-1.jpg", 315px, 100%)
+}
+
+.newListPic-2{
+    @include bgPicture("../image/index/new-list-2.jpg", 315px, 100%)
+}
+
+.newListPic-3{
+    @include bgPicture("../image/index/new-list-3.jpg", 315px, 100%)
+}
+
+// 物品資訊
+.item-name{
+    font-size: 20px;
+    padding: 15px;
+  }  
+  
+  .item-price{
+    font-size: 20px;
+    font-weight: bolder;
+    padding: 15px;
+  }
+  
+  .item-tag{
+    position: absolute;
+    left: 20px;
+    padding: 15px 10px;
+    letter-spacing: 5px;
+    background-color: rgba(theme-color('primary'), .8);
+    color: white;
+    writing-mode: vertical-rl;
+  }
+  
+// 點擊心型
+  .checkbox{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    .checkbox-input,.heart-open{
+      display: none;
+    }
+    .checkbox-input:checked{
+      & ~ .heart-open{
+        display: block;
+      }
+      & ~ .heart-close{
+        display: none;
+      }
+    }
+  }
+
+  .QQ{
+     color: rgba(theme-color('primary'), 1);
+     font-family: "微軟正黑體";
+     font-size: 48px;
+  }

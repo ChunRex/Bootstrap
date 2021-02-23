@@ -1,0 +1,79 @@
+// shoppingCart - 第一頁面
+// 桌遊圖片
+.cart-item-1-lg{
+    @include bgPicture("../image/shoppingCart/sale-1.png", 110px, 110px)
+}
+
+.cart-item-1-md{
+    @include bgPicture("../image/shoppingCart/sale-1.png", 110px, 100%)
+}
+
+.cart-item-2-lg{
+    @include bgPicture("../image/shoppingCart/sale-2.png", 110px, 110px)
+}
+
+.cart-item-2-md{
+    @include bgPicture("../image/shoppingCart/sale-2.png", 110px, 100%)
+}
+
+.cart-item-3-lg{
+    @include bgPicture("../image/shoppingCart/sale-3.png", 110px, 110px)
+}
+
+
+// shoppingCart 進度條
+.check-empty{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: theme-color("primary");
+    z-index: 5;
+}
+
+.check-full{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 5;
+}
+
+.progress-bar{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 12px;
+    background-color: white;
+}
+
+// shoppingCart-end 進度條
+.check-end{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: theme-color("primary");
+    z-index: 5;
+}
+
+.progress-end-bar{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 12px;
+    background-color: theme-color("primary");
+}
+
+// 付款成功
+.shoppingcart-img-end{
+    @include bgPicture("../image/shoppingCart/success-background.jpg", 496px, 100%)
+}
+
+.paySuccess{
+    font-size: 48px;
+    color: theme-color("primary");
+}
